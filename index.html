@@ -123,12 +123,13 @@
       color: #1e4660;
       font-weight: 500;
       border-bottom: none;
+      cursor: pointer;
+      transition: color 0.2s;
     }
-
     .email-link:hover {
-      color: #0f2b3d;
+      color: #0a5c7e;
       border-bottom: none;
-      background: transparent;
+      text-decoration: underline;
     }
 
     /* cards for sections (soft background) */
@@ -282,7 +283,10 @@
         <span>The Hong Kong Polytechnic University</span>
       </div>
       <div class="contact-info">
-        <span>Email: yihangao97[at]gmail[dot]com</span>
+        <span>
+          Email: 
+          <a href="mailto:yi-han.gao@connect.polyu.hk" class="email-link">yi-han.gao[at]connect[dot]polyu[dot]hk</a>
+        </span>
         <span>AAE, PolyU</span>
       </div>
     </div>
@@ -308,7 +312,7 @@
       </ul>
     </section>
 
-    <!-- Work Experiences -->
+    <!-- Experiences -->
     <section id="experiences" class="card-section">
       <h2>Experiences</h2>
       <ul class="list-icon">
