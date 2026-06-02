@@ -62,10 +62,6 @@
       margin-top: 0.5rem;
     }
 
-    h3, .subhead {
-      font-weight: 500;
-    }
-
     a {
       color: #2c7da0;
       text-decoration: none;
@@ -100,11 +96,12 @@
       gap: 0.6rem;
     }
 
+    /* contact info - now a single row */
     .contact-info {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
+      flex-wrap: nowrap;
       align-items: center;
+      gap: 1.5rem;
       background: #eef2f6;
       padding: 0.6rem 1.2rem;
       border-radius: 60px;
@@ -113,10 +110,11 @@
       font-size: 0.95rem;
     }
 
-    .contact-info span {
+    .contact-item {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      white-space: nowrap;
     }
 
     .email-link {
@@ -125,11 +123,21 @@
       border-bottom: none;
       cursor: pointer;
       transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
     }
     .email-link:hover {
       color: #0a5c7e;
       border-bottom: none;
       text-decoration: underline;
+    }
+
+    .envelope-icon {
+      font-size: 1rem;
+      color: #1e4660;
+      line-height: 1;
+      display: inline-block;
     }
 
     /* cards for sections (soft background) */
@@ -159,12 +167,6 @@
     /* publication items: more readable */
     .pub-list li, .conf-list li {
       margin-bottom: 1rem;
-    }
-
-    /* badge style for awards / projects */
-    .project-item {
-      margin: 0.85rem 0;
-      line-height: 1.5;
     }
 
     /* related links row */
@@ -223,10 +225,12 @@
         padding: 0.2rem 1.2rem 1.2rem 1.2rem;
       }
       .contact-info {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 0.8rem;
         border-radius: 28px;
-        gap: 0.5rem;
+      }
+      .contact-item {
+        white-space: normal;
       }
       .link-row {
         border-radius: 32px;
@@ -235,15 +239,7 @@
       }
     }
 
-    /* small touches */
-    hr {
-      margin: 1rem 0;
-      border: none;
-      height: 1px;
-      background: #e2edf2;
-    }
-
-    /* custom bullet for lists – simple dot instead of emoji/icon */
+    /* custom bullet for lists – simple dot */
     .list-icon {
       list-style-type: none;
       padding-left: 0;
@@ -298,7 +294,7 @@
     <section id="about" class="card-section">
       <h2>About Me</h2>
       <div class="intro-text">
-        <p>I am currently a Ph.D. candidate in Transportation (supervised by Prof. Wei Liu) at <a href="https://www.polyu.edu.hk/en/aae/" target="_blank" rel="noopener">the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University</a>. My research focuses on transport network modeling, electrified and automated transportation, and transport dynamics.</p>
+        <p>I am currently a Ph.D. candidate in Transportation (supervised by Prof. Wei Liu) at <a href="https://www.polyu.edu.hk/en/aae/" target="_blank" rel="noopener">the Department of Aeronautical and Aviation Engineering, The Hong Kong Polytechnic University</a>. My research focuses on transport network modeling, electrified and automated transportation, and transport dynamics. My work focuses on designing sustainable and intelligent mobility solutions using operations research and data-driven approaches.</p>
       </div>
     </section>
 
@@ -313,9 +309,9 @@
       </ul>
     </section>
 
-    <!-- Work Experiences -->
-    <section id="experiences" class="card-section">
-      <h2>Experiences</h2>
+    <!-- Work Experience (formerly Experiences) -->
+    <section id="work-experience" class="card-section">
+      <h2>Work Experience</h2>
       <ul class="list-icon">
         <li>Dec. 2022 – Aug. 2023, Research Assistant, The Hong Kong Polytechnic University</li>
       </ul>
